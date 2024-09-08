@@ -6,7 +6,7 @@ function App() {
   return (
     <main className="md:flex h-dvh">
       <ListCryptos />
-      <div>
+      <div className="w-full">
         <ChartCrypto />
         <FavoriteCryptos />
       </div>
