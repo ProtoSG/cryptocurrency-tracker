@@ -1,5 +1,7 @@
 import StarIcon from "../../assets/icons/StarIcon";
 import { useCrypto } from "../core/hooks/useCrypto";
+import ChartArea from "./components/chartPercentChange/ChartArea";
+import ItemDetail from "./components/ItemDetail";
 
 export default function ChartCrypto() {
 
@@ -26,6 +28,9 @@ export default function ChartCrypto() {
             {crypto?.quote.USD.percent_change_24h.toFixed(2)}%
           </span>
         </section>
+        <section>
+          <ChartArea />
+        </section>
         <section className="flex flex-col gap-3">
           {
             crypto !== null && (
@@ -46,16 +51,3 @@ export default function ChartCrypto() {
   )
 }
 
-interface ItemDetalProps {
-  name: String,
-  info: String | number
-}
-
-function ItemDetail({ name, info }: ItemDetalProps) {
-  return (
-    <div className="flex gap-2 font-semibold">
-      <p>{name}</p>
-      <span>{info}</span>
-    </div>
-  )
-}
