@@ -1,7 +1,7 @@
 import StarIcon from "../../assets/icons/StarIcon";
 import { useCrypto } from "../core/hooks/useCrypto";
-import ChartArea from "./components/chartPercentChange/ChartArea";
-import ItemDetail from "./components/ItemDetail";
+import ChartLine from "./ChartLine";
+import ItemDetail from "./ItemDetail";
 
 export default function ChartCrypto() {
 
@@ -29,7 +29,7 @@ export default function ChartCrypto() {
           </span>
         </section>
         <section>
-          <ChartArea />
+          <ChartLine />
         </section>
         <section className="flex flex-col gap-3">
           {
