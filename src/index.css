@@ -19,6 +19,24 @@
 body {
   font-family: "Roboto", sans-serif;
   max-height: 100dvh;
-  background: rgb(33,33,33);
+  background: #323232;
   color: #fff;
+}
+
+*::-webkit-scrollbar
+{
+    width: 8px;
+    height: 8px;
+}
+
+/**::-webkit-scrollbar-track*/
+/*{*/
+/*    background: #323232;*/
+/*    border-radius: 12px;*/
+/*}*/
+
+
+*::-webkit-scrollbar-thumb{
+    background: gray;
+    border-radius: 12px;
 }
