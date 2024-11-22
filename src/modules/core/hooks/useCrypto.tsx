@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import { DataItem } from "../model/data.mode";
 import { createContext, useContext, useEffect, useState } from "react";
+import { DataItem } from "../../../model/data.mode";
 
 interface Props {
   children: React.ReactNode;
