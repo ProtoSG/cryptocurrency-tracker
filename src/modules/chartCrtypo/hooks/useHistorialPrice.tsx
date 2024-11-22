@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HistorialPrice } from "../model/historialPrice.model";
+const api = import.meta.env.VITE_BACKEND_URL
 
 interface Props {
   id: number
@@ -14,7 +15,7 @@ export const useHistorialPriceProvider = ({ id }: Props) => {
     setLoading(true);
     try {
       setError(null);
-      const response = await fetch(`http://localhost:8080/historialPrice/crypto/${id}`);
+      const response = await fetch(`${api}/historialPrice/crypto/${id}`);
       const data: HistorialPrice[] = await response.json();
       setHistorialPrice(data);
     } catch (error) {
