@@ -5,7 +5,6 @@ import FavoriteCryptos from "./modules/favoriteCryptos/FavoriteCryptos";
 import ListCryptos from "./modules/listCryptos/ListCryptos";
 
 function App() {
-
   return (
     <CryptoProvider>
       <main className="flex md:flex-row flex-col h-dvh">
