@@ -26,14 +26,11 @@ export const CryptoProvider = ({ children }: Props) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<Error | null>(null)
 
-  console.log({ api })
-
   const fetchData = async () => {
     setLoading(true)
     try {
       setError(null)
       const response = await fetch(`${api}/crypto`)
-      console.log({ response })
       const data: DataItem[] = await response.json()
       setData(data)
     } catch (error) {
