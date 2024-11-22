@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import ChartCrypto from "./modules/chartCrtypo/ChartCrypto";
 import { CryptoProvider } from "./modules/core/hooks/useCrypto";
 import FavoriteCryptos from "./modules/favoriteCryptos/FavoriteCryptos";
@@ -7,13 +8,14 @@ function App() {
 
   return (
     <CryptoProvider>
-      <main className="md:flex h-dvh ">
+      <main className="flex md:flex-row flex-col h-dvh">
         <ListCryptos />
-        <div className="flex-1 flex flex-col w-[60%]">
+        <div className="flex-1 flex flex-col px-8 md:px-0 md:w-[60%]">
           <ChartCrypto />
           <FavoriteCryptos />
         </div>
       </main>
+      <Toaster richColors />
     </CryptoProvider>
   )
 }
