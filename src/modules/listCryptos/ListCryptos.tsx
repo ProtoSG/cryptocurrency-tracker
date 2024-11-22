@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Box } from "../../components";
 import { useCrypto, useCryptoSelected } from "../core/hooks/useCrypto";
 import ItemCrypto from "./components/ItemCrypto";
@@ -13,7 +12,7 @@ export default function ListCryptos() {
   if (loading) return <p>Loading...</p>
 
   return (
-    <section className="flex-none min-w-[480px] w-[480px] p-8 flex flex-col gap-8">
+    <section className="flex-none md:w-[40%] md:max-w-[480px] p-8 flex flex-col gap-8">
       <Box className="flex flex-col gap-4">
         <h1 className="md:hidden lg:block text-pretty text-2xl font-semibold">Crypto Tracker</h1>
         <h1 className="hidden md:block lg:hidden text-pretty text-center mb-6 px-8 text-4xl font-semibold">C T</h1>
