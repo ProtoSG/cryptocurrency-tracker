@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useCrypto, useCryptoSelected } from "../../core/hooks/useCrypto";
 import SearchIcon from "../../../assets/icons/SearchIcon";
-import { DataItem } from "../../core/model/data.mode";
 
 export default function SearchCrypto() {
   const [search, setSearch] = useState("");
